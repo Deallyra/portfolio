@@ -6767,7 +6767,6 @@ body {
   }
 }
 .main-col .col-main {
-  padding-left: 30px !important;
   float: left;
   width: 100%;
   position: relative;
@@ -6787,9 +6786,12 @@ body {
     width: 52.5%;
   }
 }
+@media (min-width: 768px) {
+  .main-col .col-main {
+    padding-left: 30px !important;
+  }
+}
 .main-col .col-aside-right {
-  min-height: 1225px !important;
-  padding-left: 30px !important;
   background-color: #e3e3e3;
   float: left;
   width: 100%;
@@ -6800,7 +6802,9 @@ body {
 }
 @media (min-width: 768px) {
   .main-col .col-aside-right {
+    min-height: 1225px !important;
     margin-left: 25px;
+    padding-left: 30px !important;
   }
 }
 @media (min-width: 1200px) {
@@ -6867,24 +6871,45 @@ header nav ul li a {
 aside,
 main,
 header {
-  padding-left: 30px;
+  padding-left: 15px;
   font-size: 1.6rem;
 }
+@media (min-width: 768px) {
+  aside,
+  main,
+  header {
+    padding-left: 30px;
+  }
+}
 aside {
-  min-height: 1225px;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  padding-right: 30px;
+  min-height: auto;
+  padding-top: 30px;
+  padding-right: 15px;
+  padding-bottom: 30px;
   background-color: #e3e3e3;
+}
+@media (min-width: 768px) {
+  aside {
+    padding-top: 60px;
+    padding-right: 30px;
+    padding-bottom: 60px;
+  }
 }
 @media (min-width: 1200px) {
   aside {
+    min-height: 1225px;
     padding-bottom: 0;
   }
 }
 aside h1 {
   font-size: 1.4rem;
   line-height: 2.1rem;
+  text-align: justify;
+}
+@media (min-width: 768px) {
+  aside h1 {
+    text-align: left;
+  }
 }
 aside h2 {
   display: block;
@@ -7044,6 +7069,14 @@ aside .reseaux_sociaux ul li a.viadeo {
 aside .glyphicon {
   margin-right: 10px;
 }
+main {
+  padding-left: 0 !important;
+}
+@media (min-width: 768px) {
+  main {
+    padding-left: 30px;
+  }
+}
 main h2,
 main h3 {
   color: #98cc30;
@@ -7071,6 +7104,20 @@ main h3 {
 }
 main section {
   margin-top: 30px;
+  padding: 0 15px;
+}
+@media (min-width: 768px) {
+  main section {
+    padding: 0;
+  }
+}
+main section.loisirs {
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  main section.loisirs {
+    margin-bottom: auto;
+  }
 }
 main .experience {
   /*a*/
@@ -7085,6 +7132,16 @@ main .experience h3 {
 main .experience .date {
   font-size: 2rem;
   color: #666666;
+}
+main .experience h3 + small {
+  display: block;
+  margin: 10px 0;
+}
+@media (min-width: 768px) {
+  main .experience h3 + small {
+    display: inline;
+    margin: auto;
+  }
 }
 main .experience .entreprise {
   color: #777;

@@ -36,19 +36,22 @@ body {
     }
 
     .col-main {
-        padding-left: 30px !important;
         .make-xs-column(12, 0px);
         .make-sm-column(9, 0px);
         .make-lg-column(6.3, 0px);
+
+        @media (min-width: @screen-sm-min) {
+            padding-left: 30px !important;
+        }
     }
 
     .col-aside-right {
-        min-height: @min-height !important;
-        padding-left: 30px !important;
         background-color: #e3e3e3;
 
         @media (min-width: @screen-sm-min) {
+            min-height: @min-height !important;
             margin-left: 25px;
+            padding-left: 30px !important;
         }
 
         .make-xs-column(12, 0px);
@@ -120,24 +123,37 @@ header {
 }
 
 aside, main, header {
-    padding-left: 30px;
+    padding-left: 15px;
+    @media (min-width: @screen-sm-min) {
+        padding-left: 30px;
+    }
     font-size: 1.6rem;
 }
 
 aside {
-    min-height: @min-height;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    padding-right: 30px;
+    min-height: auto;
+    padding-top: 30px;
+    padding-right: 15px;
+    padding-bottom: 30px;
+    @media (min-width: @screen-sm-min) {
+        padding-top: 60px;
+        padding-right: 30px;
+        padding-bottom: 60px;
+    }
     background-color: lighten(#cacaca, 10%);
 
     @media (min-width: @screen-lg-min) {
+        min-height: @min-height;
         padding-bottom: 0;
     }
 
     h1 {
         font-size: 1.4rem;
         line-height: 2.1rem;
+        text-align: justify;
+        @media (min-width: @screen-sm-min) {
+            text-align: left;
+        }
     }
 
     h2 {
@@ -298,6 +314,11 @@ aside {
 }
 
 main {
+    padding-left: 0 !important;
+    @media (min-width: @screen-sm-min) {
+        padding-left: 30px;
+    }
+
     h2, h3 {
         color: @main-color;
         text-transform: uppercase;
@@ -328,6 +349,17 @@ main {
 
     section {
         margin-top: 30px;
+        padding: 0 15px;
+        @media (min-width: @screen-sm-min) {
+            padding: 0;
+        }
+
+        &.loisirs {
+            margin-bottom: 30px;
+            @media (min-width: @screen-sm-min) {
+                margin-bottom: auto;
+            }
+        }
     }
 
     .experience {
@@ -337,6 +369,16 @@ main {
             font-size: 2rem;
             color: #666666;
         }
+
+        h3 + small {
+            display: block;
+            margin: 10px 0;
+            @media (min-width: @screen-sm-min) {
+                display: inline;
+                margin: auto;
+            }
+        }
+
         /*a*/.entreprise {
             color: #777;
             transition: color 0.6s ease;
