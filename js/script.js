@@ -1,27 +1,15 @@
-var $animation_elements = $('.point');
-var $window = $(window);
+$(document).ready(function() {
+    $(".more").on("click", function() {
+        var xp = $(this).data("xp");
+        var titre = $(this).data("titre");
 
-function check_if_in_view() {
-  var window_height = $window.height();
-  var window_top_position = $window.scrollTop();
-  var window_bottom_position = (window_top_position + window_height);
-      console.log(window_height+", "+window_top_position+", "+window_bottom_position);
-
-  $.each($animation_elements, function() {
-    var $element = $(this);
-    var element_height = $element.outerHeight();
-    var element_top_position = $element.offset().top;
-    var element_bottom_position = (element_top_position + element_height);
-
-    //check to see if this current container is within viewport
-    if ((element_bottom_position >= window_top_position) &&
-        (element_top_position <= window_bottom_position)) {
-      $element.addClass('visible');
-    } else {
-      $element.removeClass('visible');
-    }
-  });
-}
-
-$window.on('scroll resize', check_if_in_view);
-$window.trigger('scroll');
+        $.get(
+            "modal_"+xp+".php",
+            function(data) {
+                $("#modal_more .modal-body").html(data);
+                $("#modal_more .modal-title").html(titre);
+            }
+        );
+        $('#modal_more').modal("show");
+    });
+});
