@@ -370,6 +370,23 @@ main {
             @media (min-width: @screen-sm-min) {
                 margin-bottom: auto;
             }
+
+            @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
+                ul {
+                    padding-left: 0;
+                    li {
+                        display: inline;
+
+                        &:after {
+                            content: ",";
+                        }
+
+                        &:last-child:after {
+                            content: none;
+                        }
+                    }
+                }
+            }
         }
     }
 
