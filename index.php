@@ -25,7 +25,7 @@
         <div class="visible-md">MD</div>
         <div class="visible-lg">LG</div>
 
-        <div class="conteiner-fluid">
+        <div class="container-fluid">
             <div class="main-col">
                 <!--<div class="row">-->
                     <div class="col-aside-left">

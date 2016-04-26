@@ -26,19 +26,24 @@ body {
   font-size: 10px;
 }
 
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 .main-col {
     .make-row(0px);
 
     .col-aside-left {
         .make-xs-column(12, 0px);
         .make-sm-column(3, 0px);
-        .make-lg-column(1.7, 0px);
+        .make-lg-column(2, 0px);
     }
 
     .col-main {
         .make-xs-column(12, 0px);
         .make-sm-column(9, 0px);
-        .make-lg-column(6.3, 0px);
+        .make-lg-column(6, 0px);
 
         @media (min-width: @screen-sm-min) {
             padding-left: 30px !important;
@@ -49,15 +54,17 @@ body {
         background-color: #e3e3e3;
 
         @media (min-width: @screen-sm-min) {
-            min-height: @min-height !important;
-            margin-left: 25px;
             padding-left: 30px !important;
+        }
+
+        @media (min-width: @screen-lg-min) {
+            min-height: @min-height !important;
         }
 
         .make-xs-column(12, 0px);
         .make-lg-column(3, 0px);
 
-        .make-lg-column-offset(1);
+        /*.make-lg-column-offset(1);*/
     }
 }
 
@@ -136,6 +143,7 @@ aside {
     padding-right: 15px;
     padding-bottom: 30px;
     @media (min-width: @screen-sm-min) {
+        min-height: 1315px;
         padding-top: 60px;
         padding-right: 30px;
         padding-bottom: 60px;
@@ -434,6 +442,20 @@ main {
         }
         article + article {
             margin-top: 10px;
+        }
+    }
+
+    @media (min-width: @screen-sm-min) and (max-width: @screen-md-max){
+        .competences_dev, .logiciels, .langues, .loisirs {
+            display: table;
+
+            h2 {
+                display: table-caption;
+            }
+
+            .competence_dev, .logiciel, .langue, .loisir {
+                display: table-cell;
+            }
         }
     }
 

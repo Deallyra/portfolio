@@ -6742,6 +6742,10 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 10px;
 }
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
 .main-col {
   margin-left: 0px;
   margin-right: 0px;
@@ -6763,7 +6767,7 @@ body {
 @media (min-width: 1200px) {
   .main-col .col-aside-left {
     float: left;
-    width: 14.16666667%;
+    width: 16.66666667%;
   }
 }
 .main-col .col-main {
@@ -6783,7 +6787,7 @@ body {
 @media (min-width: 1200px) {
   .main-col .col-main {
     float: left;
-    width: 52.5%;
+    width: 50%;
   }
 }
 @media (min-width: 768px) {
@@ -6799,23 +6803,22 @@ body {
   min-height: 1px;
   padding-left: 0px;
   padding-right: 0px;
+  /*.make-lg-column-offset(1);*/
 }
 @media (min-width: 768px) {
   .main-col .col-aside-right {
-    min-height: 1225px !important;
-    margin-left: 25px;
     padding-left: 30px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .main-col .col-aside-right {
+    min-height: 1225px !important;
   }
 }
 @media (min-width: 1200px) {
   .main-col .col-aside-right {
     float: left;
     width: 25%;
-  }
-}
-@media (min-width: 1200px) {
-  .main-col .col-aside-right {
-    margin-left: 8.33333333%;
   }
 }
 header {
@@ -6890,6 +6893,7 @@ aside {
 }
 @media (min-width: 768px) {
   aside {
+    min-height: 1315px;
     padding-top: 60px;
     padding-right: 30px;
     padding-bottom: 60px;
@@ -7196,6 +7200,38 @@ main .competences_dev article + article,
 main .logiciels article + article,
 main .langues article + article {
   margin-top: 10px;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  main .competences_dev,
+  main .logiciels,
+  main .langues,
+  main .loisirs {
+    display: table;
+  }
+  main .competences_dev h2,
+  main .logiciels h2,
+  main .langues h2,
+  main .loisirs h2 {
+    display: table-caption;
+  }
+  main .competences_dev .competence_dev,
+  main .logiciels .competence_dev,
+  main .langues .competence_dev,
+  main .loisirs .competence_dev,
+  main .competences_dev .logiciel,
+  main .logiciels .logiciel,
+  main .langues .logiciel,
+  main .loisirs .logiciel,
+  main .competences_dev .langue,
+  main .logiciels .langue,
+  main .langues .langue,
+  main .loisirs .langue,
+  main .competences_dev .loisir,
+  main .logiciels .loisir,
+  main .langues .loisir,
+  main .loisirs .loisir {
+    display: table-cell;
+  }
 }
 main .autres_competences {
   margin-bottom: 30px;
