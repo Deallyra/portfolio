@@ -20,10 +20,10 @@
         <script src="js/script.js"></script>
     </head>
     <body>
-        <div class="visible-xs">XS</div>
+        <!--<div class="visible-xs">XS</div>
         <div class="visible-sm">SM</div>
         <div class="visible-md">MD</div>
-        <div class="visible-lg">LG</div>
+        <div class="visible-lg">LG</div>-->
 
         <div class="container-fluid">
             <div class="main-col">
@@ -56,7 +56,7 @@
                 <!--</div>-->
             </div>
 
-            <?php include("footer.php"); ?>
+            <?php //include("footer.php"); ?>
             <?php include("modal.php"); ?>
     </body>
 </html>
