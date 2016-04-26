@@ -148,6 +148,9 @@ aside {
         padding-right: 30px;
         padding-bottom: 60px;
     }
+    @media (min-width: @screen-sm-min) {
+        min-height: 1475px;
+    }
     background-color: lighten(#cacaca, 10%);
 
     @media (min-width: @screen-lg-min) {
@@ -439,6 +442,9 @@ main {
         h3 {
             color: #777777;
             text-transform: none;
+            @media (min-width: @screen-sm-min) and (max-width: @screen-md-max) {
+                margin-bottom: 10px;
+            }
         }
         article + article {
             margin-top: 10px;
@@ -470,6 +476,12 @@ main {
         border: 1px solid lighten(#222222, 20%);
         border-radius: 26px;
         background-color: #ffffff;
+
+        @media (min-width: @screen-sm-min) and (max-width: @screen-md-max) {
+            .square(15px);
+            border-radius: 15px;
+        }
+
         & + .point { margin-left: 5px;  }
         &.rempli:after {
             content: " ";
@@ -483,6 +495,14 @@ main {
             border: 1px solid lighten(#222222, 20%);
             border-radius: 18px;
             background-color: @main-color;
+
+            @media (min-width: @screen-sm-min) and (max-width: @screen-md-max) {
+                .square(16px);
+                top: -1.3px;
+                left: -1.5px;
+                margin-top: 0;
+                margin-left: 0;
+            }
         }
     }
 }
